@@ -617,5 +617,18 @@
   <a href="https://wa.me/17862134550" class="whatsapp-button" target="_blank">
     Chat on WhatsApp
   </a>
+    <a href="https://wa.me/17862134550" class="whatsapp-button" target="_blank">
+    Chat on WhatsApp
+  </a>
+
+<script>
+  window.addEventListener("load", function () {
+    if (window.location.hash === "#contact") {
+      history.replaceState(null, null, window.location.pathname);
+      window.scrollTo(0, 0);
+    }
+  });
+</script>
+
 </body>
 </html>
