@@ -5,10 +5,26 @@
 <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deiko Real Estate</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+
+<style>
+.lang {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.lang span {
+  margin: 0 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+    
 
     body {
       margin: 0;
@@ -394,14 +410,24 @@
   </div>
 
   <section class="hero">
-    <div class="container">
-      <div class="hero-card">
-        <div class="brand">Deiko Real Estate</div>
-        <h1>South Florida Real Estate with a Modern, Personal Approach</h1>
-        <p>
-          Helping buyers, sellers, renters, and new construction clients across
-          Miami, Bal Harbour, Sunny Isles, Boca Raton, Fort Lauderdale, and Broward County.
-        </p>
+
+  <div class="lang">
+    <span onclick="setLang('en')">EN</span> |
+    <span onclick="setLang('ru')">RU</span>
+  </div>
+
+  <div class="container">
+    <div class="hero-card">
+      <div class="brand">Deiko Real Estate</div>
+
+      <h1 id="title">
+        South Florida Real Estate with a Modern, Personal Approach
+      </h1>
+
+      <p id="subtitle">
+        Helping buyers, sellers, renters, and new construction clients across
+        Miami, Bal Harbour, Sunny Isles, Boca Raton, Fort Lauderdale, and Broward County.
+      </p>
 
           <a href="search.html" class="btn btn-primary">Search Homes</a>
           <a href="just-sold.html" class="btn btn-secondary">Just Sold</a>
@@ -628,6 +654,22 @@
     }
   });
 </script>
+<script>
+function setLang(lang) {
+  if (lang === 'ru') {
+    document.getElementById('title').innerText =
+      'Недвижимость Южной Флориды с современным персональным подходом';
 
+    document.getElementById('subtitle').innerText =
+      'Помогаю покупателям, продавцам и инвесторам в Майами, Sunny Isles, Boca Raton и Fort Lauderdale.';
+  } else {
+    document.getElementById('title').innerText =
+      'South Florida Real Estate with a Modern, Personal Approach';
+
+    document.getElementById('subtitle').innerText =
+      'Helping buyers, sellers, renters, and new construction clients across Miami, Bal Harbour, Sunny Isles, Boca Raton, Fort Lauderdale, and Broward County.';
+  }
+}
+</script>
 </body>
 </html>
