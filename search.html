@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Homes | Deiko Real Estate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .search-box {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    .search-box h1 {
+      margin-top: 0;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    input, select, button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.95;
+    }
+
+    .listing {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .listing h3 {
+      margin-top: 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #1d4ed8;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Search Homes</h1>
+    <p>Browse homes in South Florida</p>
+  </header>
+
+  <div class="container">
+    <div class="search-box">
+      <h1>Find Your Next Home</h1>
+      <p>Search by city, price, and property type.</p>
+
+      <div class="search-grid">
+        <input type="text" placeholder="City or Area" />
+        <select>
+          <option>Min Price</option>
+          <option>$200,000</option>
+          <option>$300,000</option>
+          <option>$500,000</option>
+        </select>
+        <select>
+          <option>Max Price</option>
+          <option>$400,000</option>
+          <option>$600,000</option>
+          <option>$1,000,000+</option>
+        </select>
+        <select>
+          <option>Property Type</option>
+          <option>Condo</option>
+          <option>House</option>
+          <option>Townhome</option>
+        </select>
+        <button>Search</button>
+      </div>
+    </div>
+
+    <div class="listing">
+      <h3>Sunny Isles Beach Condo</h3>
+      <p><strong>Price:</strong> $340,000</p>
+      <p><strong>MLS:</strong> A11930856</p>
+      <p><strong>Address:</strong> 201 180th Dr Unit #114, Sunny Isles Beach, FL</p>
+      <p><strong>Community:</strong> The Isles Condo</p>
+    </div>
+
+    <div class="listing">
+      <h3>More listings coming soon</h3>
+      <p>This page can later connect to IDX or MLS search tools.</p>
+    </div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
